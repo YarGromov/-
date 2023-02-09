@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT} from "./types";
+import {CHANGE_THEME, DECREMENT, INCREMENT} from "./types";
 
 export  function increment(){
     return {
@@ -11,6 +11,14 @@ export  function decrement(){
         type: DECREMENT
     }
 }
+
+export  function changeTheme(newTheme){
+    return {
+        type: CHANGE_THEME,
+        payload: newTheme
+    }
+}
+
 export  function asyncIncrement(){
     return function (dispatch){
         setTimeout(()=>{
