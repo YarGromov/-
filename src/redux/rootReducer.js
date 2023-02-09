@@ -1,9 +1,11 @@
+import {ASYNC_INCREMENT, DECREMENT, INCREMENT} from "./types";
+
 export function rootReducer(state, action){
     switch (action.type){
-        case "INCREMENT": {
+        case INCREMENT: {
             return state + 1
         }
-        case "DECREMENT": {
+        case DECREMENT: {
             return state - 1
         }
         default:
