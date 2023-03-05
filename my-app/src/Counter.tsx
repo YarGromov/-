@@ -1,12 +1,11 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "./bll/store";
-import {incValueAC} from "./bll/counterReducer";
+import {incValueAC, incValuesTC} from "./bll/counterReducer";
 
 export const Counter = () => {
 
     const value = useSelector<AppStateType, number>(state => state.counter.value)
-
     const dispatch = useDispatch()
 
     const incHandler = () => {
